@@ -63,7 +63,8 @@ int main()
         Get the player selection using scanf and storing this in the player variable.
         %c is the format specifier for a char.
     */ 
-    printf("Enter a for rock, b for paper, and c for scissors\n");
+    printf("Options:\n\ta = Rock\n\tb = Paper\n\tc = Scissors\n\n");
+    printf("Please enter your selection:\n");
     scanf(" %c", &player);
 
     /*
@@ -75,15 +76,15 @@ int main()
     // Display the result to the user based on the return value of the game function.
     if (result == 0)
     {
-        printf("Game Draw");
+        printf("\nDraw!");
     } else if (result == 1) {
-        printf("You won the game");
+        printf("\nWin!");
     } else {
-        printf("You lost");
+        printf("\nLost!");
     }
 
     // Display both player and computer choice to the user at the end of the game.
-    printf("You chose %c and the computer chose %c", player, computer);
+    printf("\nYou chose %c and the computer chose %c", player, computer);
     
     return 0;
 }
