@@ -28,6 +28,15 @@ int game(char player, char computer)
     return calculated_result;
 }
 
+// Convert the char choice of the player or computer to the string choice for final display
+const char* choice_to_string(char choice)
+{
+    if (choice == 'a') return "rock";
+    if (choice == 'b') return "paper";
+    if (choice == 'c') return "scissors";
+    return "Invalid"; // fallback
+}
+
 int main()
 {
     int random_number;
@@ -84,7 +93,7 @@ int main()
     }
 
     // Display both player and computer choice to the user at the end of the game.
-    printf("\nYou chose %c and the computer chose %c", player, computer);
+    printf("\nYou chose %s and the computer chose %s", choice_to_string(player), choice_to_string(computer));
     
     return 0;
 }
