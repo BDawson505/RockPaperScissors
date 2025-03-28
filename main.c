@@ -71,10 +71,22 @@ int main()
     /*
         Get the player selection using scanf and storing this in the player variable.
         %c is the format specifier for a char.
+        Only allow the user to enter available options.
     */ 
     printf("Options:\n\ta = Rock\n\tb = Paper\n\tc = Scissors\n\n");
     printf("Please enter your selection:\n");
-    scanf(" %c", &player);
+
+    while (1) {
+        scanf(" %c", &player); 
+        
+        // Check if the input is valid
+        if (player == 'a' || player == 'b' || player == 'c') {
+            break; 
+        } else {
+            printf("Invalid input! Please enter 'a' for Rock, 'b' for Paper, or 'c' for Scissors:\n");
+        }
+    }
+
 
     /*
         Call the game function and passes the player and computer selection, and stores the return value in result variable.
