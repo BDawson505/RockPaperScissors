@@ -90,7 +90,7 @@ int main()
 
     /*
         Call the game function and passes the player and computer selection, and stores the return value in result variable.
-        Returns 0 (computer win), 1 (draw), or 2 (player win).
+        Returns 0 (Draw), 1 (Player Win), or 2 (Computer Win).
     */
     int result = game(player, computer);
 
